@@ -1,10 +1,23 @@
-import './App.css';
+import { BrowserRouter, Route } from "react-router-dom"
+import Landing from "./views/Landing/Landing";
+import Home from "./views/Home/Home.jsx"
+import AddActivity from "./views/AddActivity/AddActivity";
+import Card from "./views/Card/Card";
+import NavBar from "./views/NavBar/NavbBar";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Henry Countries</h1>
-    </div>
+    <>
+      <BrowserRouter>
+        <NavBar />
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/countries" component={Home} />
+        <Route exact path="/country" component={Card} />
+        <Route exact path="/AddActivity" component={AddActivity} />
+      </BrowserRouter>
+    </>
   );
 }
 

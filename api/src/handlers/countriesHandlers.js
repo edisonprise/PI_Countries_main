@@ -5,9 +5,13 @@ const {
 } = require("../controllers/countriesControllers");
 
 const getCountriesHandler = async (req, res) => {
-  let name = req.query.name;
-  const results = name ? countryName(name, res) : await todosCountries();
-  res.status(200).json(results);
+  const { name } = req.query;
+  try {
+      const results = await getAllCountries(name);
+      res.status(200).json(results);
+  } catch (error) {
+    res.status(404).send({ msg: "Not found" });
+  }
 };
 
 const getCountryHandler = async (req, res) => {

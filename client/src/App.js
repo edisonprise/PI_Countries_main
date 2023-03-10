@@ -1,22 +1,28 @@
-import { BrowserRouter, Route } from "react-router-dom"
+import { Route } from "react-router-dom";
 import Landing from "./views/Landing/Landing";
-import Home from "./views/Home/Home.jsx"
-import AddActivity from "./views/AddActivity/AddActivity";
-import Card from "./views/Card/Card";
-import NavBar from "./views/NavBar/NavbBar";
-
-
+import Home from "./views/Home/Home.jsx";
+import NavBar from "./views/NavBar/NavbBar.jsx";
+import CountryDetail from "./views/Detail/CountryDetail";
+import Activity from "./views/Activity/Activity";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <Route path="/" exact>
+        <Landing />
+      </Route>
+      <Route path="/home">
         <NavBar />
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/countries" component={Home} />
-        <Route exact path="/country" component={Card} />
-        <Route exact path="/AddActivity" component={AddActivity} />
-      </BrowserRouter>
+      </Route>
+      <Route path="/home" exact>
+        <Home />
+      </Route>
+      <Route path="/country/:idPais" exact>
+        <CountryDetail />
+      </Route>
+      <Route path="/activity" exact>
+        <Activity />
+      </Route>
     </>
   );
 }

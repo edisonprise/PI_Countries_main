@@ -3,9 +3,13 @@ const {
 } = require("../controllers/activitiesControllers");
 
 const getActivityHandler = async (req, res) => {
-  let name = req.query.name;
-  const results = name ? ActivityName(name, res) : await getActivities();
-  res.status(200).json(results);
+  try {
+    let name = req.query.name;
+    const results = name ? ActivityName(name, res) : await getActivities();
+    res.status(200).json(results);
+  } catch (error) {
+    res.status(400).json({error: error.message})
+  }
 };
 const createActivityHandler = async (req, res) => {
   try {

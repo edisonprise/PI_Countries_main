@@ -7,7 +7,7 @@ const getActivities = async () => {
   const total = filterA.filter((item, index) => {
     return filterA.indexOf(item) === index;
   });
-  //console.log(total);
+  return total;
 };
 
 const createActivity = async (name, difficulty, duration, season, country) => {

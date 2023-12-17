@@ -1,0 +1,21 @@
+.image {
+  background-image: url("../../assets/fondo.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: auto;
+
+  /* grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3,auto);
+	grid-template-areas: 
+						"navbar navbar navbar navbar"
+						"filterbar cards cards cards"
+						"footer footer footer footer"
+						; */
+}
+/* img{ 
+    box-shadow: 10px;
+    width: 100%;
+} */

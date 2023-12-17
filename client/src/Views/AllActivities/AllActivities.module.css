@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.goBack {
+  padding: 6px;
+  width: 120px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: "calibri";
+  margin: 10px;
+  background-color: #f2f3f4;
+}
+
+.goBack:hover {
+  background-color: #f1eee9;
+}
+body {
+  background-image: url("../../assets/fondo.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: auto;
+
+  /* grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3,auto);
+	grid-template-areas: 
+						"navbar navbar navbar navbar"
+						"filterbar cards cards cards"
+						"footer footer footer footer"
+						; */
+}

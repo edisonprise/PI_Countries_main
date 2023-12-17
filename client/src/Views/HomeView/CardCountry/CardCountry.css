@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 20vw;
+
+  position: relative;
+  margin-bottom: 80px;
+  border-radius: 5px;
+  padding-top: 0px;
+}
+
+.cardContainer .details {
+  background-color: var(--article-color);
+  text-align: justify;
+}
+.cardContainer .flag {
+  margin-top: 0px;
+}
+
+.cardContainer .details .link {
+  width: auto;
+  text-align: center;
+  color: #fff;
+}
+.link:hover {
+  background-color: darkslategray;
+  color: var(--dark-bg-color);
+}
+
+.link {
+  text-decoration: none;
+}
+.imgContainer {
+  display: flex;
+  justify-content: center;
+}
+.imgContainer img {
+  border-radius: 2px;
+  width: 250px;
+  height: 180px;
+  top: -30px;
+  position: relative;
+  box-shadow: 0px 48px 15px -30px #b8b8b8;
+  border-radius: 5px;
+}
+.container {
+  display: flex;
+}
+
+.containerText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.containerText h4 {
+  margin: 4px 0;
+}
+.containerText h4 span {
+  font-weight: 300;
+}
+.containerDesc {
+  width: 100%;
+  display: flex;
+  height: 30%;
+  align-items: flex-end;
+}
+.containerInf {
+  width: 100%;
+  background-color: #132540;
+  height: 34px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.grup img {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+}
+.grup .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #e7e7e7;
+  color: #41857c;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  border-radius: 6px;
+  padding: 1px 0;
+  position: absolute;
+  z-index: 1;
+  right: 15%;
+}
+
+.grup img:hover {
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+}
+.grup img:hover ~ .tooltiptext {
+  visibility: visible;
+}
+.tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #e7e7e7;
+}

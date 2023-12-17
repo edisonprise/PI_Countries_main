@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #bcb8b1;
+}
+.form select {
+  text-decoration: none;
+  background-color: #5c80bc;
+  color: white;
+  padding: 10px;
+  margin: 3px;
+  border: 3px solid black;
+  border-radius: 5px;
+  transition: 0.1s;
+  width: 150px;
+}
+
+.button {
+  text-decoration: none;
+  background-color: #5c80bc;
+  color: white;
+  padding: 10px;
+  margin: 3px;
+  border: 3px solid black;
+  border-radius: 5px;
+  transition: 0.1s;
+  width: 150px;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
